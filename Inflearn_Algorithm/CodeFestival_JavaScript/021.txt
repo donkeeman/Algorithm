@@ -1,0 +1,31 @@
+3, 5
+
+// 원소의 중복을 허용하지 않음
+// set 선언
+// 빈 set = new Set();
+// 초기화와 동시에 선언 = new Set(["a", "b", "c"]);
+// 문자열 set = new Set("abc"); (위와 같은 결과)
+// 리스트 set = new Set(arr); (리스트에서 중복을 제거한 값만 저장)
+
+// 중괄호: object -> {key: value} 형태
+// 그래서 c++와 헷갈리면 안됨
+// var x = {1, 2, 3, 5, 6, 7};
+
+// 이건 빈 오브젝트, set은 아님
+// var x = {};
+
+// set 안에 문자열 넣어서 초기화 및 선언 동시에 가능
+// var x = new Set("javascript");
+
+// 특정 숫자나 문자의 범위 지정해서 넣는 것은 불가능
+// var x = new Set(range(5));
+
+// 빈 set 선언 가능
+// var x = new Set();
+
+// set은 array처럼 join으로 출력할 수 없으므로 array로 변경 후 join해줘야 함
+// 아니면 반복문을 써야 함
+// console.log(new Array(...x).join());
+
+// x가 set인지 아닌지 판별 -> instanceof
+// console.log(x instanceof Set);
