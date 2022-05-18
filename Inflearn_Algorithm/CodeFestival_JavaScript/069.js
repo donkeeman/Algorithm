@@ -17,6 +17,7 @@ const isPrime = n => {
 
 const goldbach = n => {
 	if(n === 2 || n % 2 === 1){
+		console.err("input은 2를 초과하는 짝수여야 합니다.");
 		return;
 	}
 	let result = [];
