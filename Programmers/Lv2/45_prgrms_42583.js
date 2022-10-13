@@ -6,7 +6,7 @@ function solution(bridge_length, weight, truck_weights) {
     let count = 0;
     let sum = 0;
     while (index < truck_weights.length) {
-        // 현재 다리 위에 있는 트럭의 카운트(초)를 1씩 증가시키고, 이게 다리의 길이를 넘어가면 통과한 것으로 간주하고 onBridge에서 제거 후 passed에 넣기
+        // 현재 다리 위에 있는 트럭의 카운트(초)를 1씩 증가시키고, 카운트가 다리의 길이를 넘어가면 통과한 것으로 간주하고 onBridge에서 제거 후 passed에 넣기
         Object.keys(onBridge).map((truckIndex) => {
             onBridge[truckIndex]++;
             if (onBridge[truckIndex] > bridge_length) {
