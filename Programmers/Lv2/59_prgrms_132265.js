@@ -1,4 +1,5 @@
 function solution(topping) {
+    // set을 이용하면 시간 초과
     let allToppings = {};
     topping.map(top => {
         if(allToppings[top]){
