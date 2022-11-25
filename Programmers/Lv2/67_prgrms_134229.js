@@ -14,8 +14,7 @@ function solution(k, ranges) {
     }
     ranges.map(([start, offset]) => {
         answer.push(
-            collatz.length + offset === start ? 0.0 
-            : collatz.length + offset < start ? -1.0 
+            collatz.length + offset < start ? -1.0 
             : collatz.slice(start, collatz.length + offset).reduce((a, b) => a + b, 0))});
     return answer;
 }
