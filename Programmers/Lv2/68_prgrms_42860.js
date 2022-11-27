@@ -6,10 +6,10 @@ function solution(name) {
             Math.min(c.charCodeAt(0) - 65, 91 - c.charCodeAt(0))
         );
     let visitedArr = charCodeArr.map((n) => (n ? false : true));
-    moveIndex(0, 0, visitedArr, [0]);
+    moveIndex(0, 0, visitedArr);
     return Math.min(...answer);
 
-    function moveIndex(startIndex, count, visited, indexOrderArr) {
+    function moveIndex(startIndex, count, visited) {
         let newVisited = visited.slice();
         count += charCodeArr[startIndex];
         newVisited[startIndex] = true;
@@ -30,14 +30,12 @@ function solution(name) {
         moveIndex(
             leftIndex,
             count + leftGap,
-            newVisited,
-            indexOrderArr.concat(leftIndex)
+            newVisited
         );
         moveIndex(
             rightIndex,
             count + rightGap,
-            newVisited,
-            indexOrderArr.concat(rightIndex)
+            newVisited
         );
     }
 }
